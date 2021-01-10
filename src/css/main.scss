@@ -1,0 +1,186 @@
+//All styles can be added here.
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(224, 212, 243) rgb(239, 235, 240);
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    // background: rgb(239, 235, 240);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color:  rgb(224, 212, 243);
+    border-radius: 20px;
+    border: 1px solid  rgb(224, 212, 243);
+  }
+  button:focus {
+      outline: none;
+  }
+  .input-max-w {
+    max-width: 210px;
+  }
+
+  .card-one {
+      min-width: 260px;
+  }
+  .w-creditcard {
+      max-width: 410px;
+      z-index: 1;
+  }
+  .w-creditcard::before {
+      content: "";
+      z-index: -1;
+      position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      margin: auto;
+      width: 85%;
+      height: 85%;
+      background-color: rgba(38, 30, 59, 0.274);
+      border-radius: 20px;
+  }
+  .w-last-segment {
+    width: 460px;
+  }
+  @media screen and(max-width:1023px) {
+    .w-last-segment {
+      width:100%;
+    }
+  }
+
+//   ///////////////////////////
+//   button {
+//     position: relative;
+//     overflow: hidden;
+//     transition: background 400ms;
+//     // background-color: #6200ee;
+//   }
+  
+//   span.ripple {
+//     position: absolute;
+//     border-radius: 50%;
+//     transform: scale(0);
+//     animation: ripple 600ms linear;
+//     background-color: rgba(255, 255, 255, 0.7);
+//   }
+  
+//   @keyframes ripple {
+//     to {
+//       transform: scale(4);
+//       opacity: 0;
+//     }
+// }
+.ripple {
+    
+    //  Customize effect by defining the following
+    //  variables on the parent element 
+    //  --ripple-background: white;
+    //  --ripple-opacity: 0.3;  
+    //  --ripple-duration: 600ms;      
+    //  --ripple-easing: linear;
+    
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        position:absolute;
+        display: block;
+        background: var(--ripple-background, white);      
+        border-radius: 50%;
+        pointer-events: none; 
+        
+        //  position and size 
+        top: calc(var(--y) * 1px);
+        left: calc(var(--x) * 1px);
+        width:  calc(var(--d) * 1px);
+        height: calc(var(--d) * 1px);
+
+        //  animated properties
+        opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));                
+        transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing,linear);   
+        transform: translate(-50%, -50%) scale(var(--s, 1));
+        transform-origin: center;
+    }
+}
+
+
+
+//////////////////// 
+[x-cloak] {
+    display: none;
+}
+
+[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.form-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    display: inline-block;
+    vertical-align: middle;
+    background-origin: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex-shrink: 0;
+    color: currentColor;
+    background-color: #fff;
+    border-color: #e2e8f0;
+    border-width: 1px;
+    border-radius: 0.25rem;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.form-checkbox:checked {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+    border-color: transparent;
+    background-color: #503396;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+///////////////// 
+// [x-cloak] {
+//     display: none;
+//   }
+
+  .line {
+    background: repeating-linear-gradient(
+      to bottom,
+      #eee,
+      #eee 1px,
+      #fff 1px,
+      #fff 8%
+    );
+  }
+  .tick {
+    background: repeating-linear-gradient(
+      to right,
+      #eee,
+      #eee 1px,
+      #fff 1px,
+      #fff 5%
+    );
+  }
+
+
