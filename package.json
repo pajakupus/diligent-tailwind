@@ -4,7 +4,6 @@
   "description": "TailwindCSS StarterKit with Gulp 4",
   "main": "gulpfile.js",
   "dependencies": {
-    "chart.js": "^2.9.4",
     "postcss": "^8.1.14",
     "tailwindcss": "^2.0.1"
   },

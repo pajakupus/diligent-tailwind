@@ -1,0 +1,1 @@
+[].map.call(document.querySelectorAll(".ripple"),(t=>{t.addEventListener("click",(e=>{e=e.touches?e.touches[0]:e;const c=t.getBoundingClientRect(),l=2*Math.sqrt(Math.pow(c.width,2)+Math.pow(c.height,2));t.style.cssText="--s: 0; --o: 1;",t.offsetTop,t.style.cssText=`--t: 1; --o: 0; --d: ${l}; --x:${e.clientX-c.left}; --y:${e.clientY-c.top};`}))}));

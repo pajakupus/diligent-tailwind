@@ -1,5 +1,151 @@
 //All styles can be added here.
+.refference {
+    background-image: url("../img/Android\ Bold\ Minimal.png");
+    z-index: -1;
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left:0;
+    // width: 1650px;
+    // height: 1080px;
+    visibility: hidden;
+    // opacity: 0.5;
+}
+.phone {
+  width: 360px;
+}
+html {
+  min-height: max-content;
+}
 
+////////////////////////// menu svg
+svg.menu-icon {
+  width: 120px;
+  height: 120px;
+}
+.one {
+  stroke-dasharray: 20 73;
+  stroke-dashoffset: 0;  
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.middle {
+  stroke-dasharray: 20 20;
+  stroke-dashoffset: 0;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.opened .one {
+  /* stroke-dasharray: 20 73; */
+  stroke-dasharray: 40 73;
+  stroke-dashoffset: -49.5px;
+}
+.opened .middle {
+  stroke-dasharray: 0 20;
+  stroke-dashoffset: -10;
+}
+/////////////////////////////////////////////
+.box {
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+}
+.nav {
+
+  box-shadow: 0px 24px 48px rgba(123, 44, 223, 0.15);
+}
+.main {
+  height: 420px;
+  z-index: 10;
+}
+.heading {
+  // font-family: Gothic A1;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 120.6%;
+}
+.subheading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120.6%;
+}
+.paragraph {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 152.6%;
+}
+.card {
+  box-shadow: 0px 25px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  width: 313px;
+  height: 156px;
+}
+.nocard {
+  width: 313px;
+  height: 156px;
+}
+.content-icon {
+  width: 68px;
+height: 83px;
+}
+.icon {
+  width: 100px;
+}
+.icon-two {
+  width: 120px;
+}
+.illustration-wrap {
+  width: 270px;
+  height: 300px;
+}
+.illustration-wrap-two {
+  width: 150px;
+  height: 160px;
+}
+.illustration1 {
+  background-image: url("../img/illustration1.svg");
+  background-repeat: no-repeat
+}
+.illustration2 {
+  background-image: url("../img/illustration2.svg");
+  background-repeat: no-repeat
+}
+.partner-wrap {
+  width: 96px;
+  height: 85px;
+}
+.stankovic {
+  position: absolute;
+  left: 0;
+  top:-8px;
+  width: 90px;
+  height: 80px;
+}
+.badin {
+  margin:auto;
+}
+.nisexpress {
+  width: 60px;
+  height: 69px;
+}
+.foot-p {
+  font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////////////////////////////////
 /* Works on Firefox */
 * {
     scrollbar-width: thin;
@@ -10,6 +156,7 @@
   *::-webkit-scrollbar {
     width: 6px;
     height: 6px;
+    display: none;
   }
   
   *::-webkit-scrollbar-track {
@@ -24,65 +171,42 @@
   button:focus {
       outline: none;
   }
-  .input-max-w {
-    max-width: 210px;
-  }
+  // .input-max-w {
+  //   max-width: 210px;
+  // }
 
-  .card-one {
-      min-width: 260px;
-  }
-  .w-creditcard {
-      max-width: 410px;
-      z-index: 1;
-  }
-  .w-creditcard::before {
-      content: "";
-      z-index: -1;
-      position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      margin: auto;
-      width: 85%;
-      height: 85%;
-      background-color: rgba(38, 30, 59, 0.274);
-      border-radius: 20px;
-  }
-  .w-last-segment {
-    width: 460px;
-  }
-  @media screen and(max-width:1023px) {
-    .w-last-segment {
-      width:100%;
-    }
-  }
+  // .card-one {
+  //     min-width: 260px;
+  // }
+  // .w-creditcard {
+  //     max-width: 410px;
+  //     z-index: 1;
+  // }
+  // .w-creditcard::before {
+  //     content: "";
+  //     z-index: -1;
+  //     position: absolute;
+  //       top: 70px;
+  //       left: 0;
+  //       right: 0;
+  //       bottom: 0;
+  //     margin: auto;
+  //     width: 85%;
+  //     height: 85%;
+  //     background-color: rgba(38, 30, 59, 0.274);
+  //     border-radius: 20px;
+  // }
+  // .w-last-segment {
+  //   width: 460px;
+  // }
+  // @media screen and(max-width:1023px) {
+  //   .w-last-segment {
+  //     width:100%;
+  //   }
+  // }
 
-//   ///////////////////////////
-//   button {
-//     position: relative;
-//     overflow: hidden;
-//     transition: background 400ms;
-//     // background-color: #6200ee;
-//   }
-  
-//   span.ripple {
-//     position: absolute;
-//     border-radius: 50%;
-//     transform: scale(0);
-//     animation: ripple 600ms linear;
-//     background-color: rgba(255, 255, 255, 0.7);
-//   }
-  
-//   @keyframes ripple {
-//     to {
-//       transform: scale(4);
-//       opacity: 0;
-//     }
-// }
-.ripple {
-    
-    //  Customize effect by defining the following
+.ripple {    
+      //  Customize effect by defining the following
     //  variables on the parent element 
     //  --ripple-background: white;
     //  --ripple-opacity: 0.3;  
@@ -114,6 +238,9 @@
     }
 }
 
+button:active {
+  // background-color: #A62CDF;
+}
 
 
 //////////////////// 
@@ -160,9 +287,6 @@
 
 
 ///////////////// 
-// [x-cloak] {
-//     display: none;
-//   }
 
   .line {
     background: repeating-linear-gradient(

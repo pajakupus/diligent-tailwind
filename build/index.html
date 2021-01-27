@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SaveUP with TailwindCSS</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+</head>
+<body class="h-screen phone flex flex-col">
+    <!-- Refference -->
+    <!-- <div class="refference"><img src="./img/Android Bold Minimal.png" alt="" srcset=""></div> -->
+    <div class="flex flex-col phone absoute top-0 left-0">
+      <div class="nav px-5 py-2 flex flex-row fixed top-0 w-full relative">
+        <div class="flex flex-nowrap justify-between items-center w-full">
+            <!-- logo -->
+            <div class="logo py-2"><img src="./img/logotext.png" alt="Diligent Software" srcset=""></div>
+            <!-- Website nav -->
+            <div class=""></div>
+            <!-- Mobile nav -->
+            <div class="menu relative">
+                <!-- <svg class="menu-icon flex justify-center item-center w-8 h-8" onclick="this.classList.toggle('opened')" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 6060" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+              <style type="text/css">
+               .st0{fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-miterlimit:10;}
+              </style>
+              <path class="st0 one" d="M19.5,22.4c0,0,14.4,0,20,0s5.2,7.6,4.8,10.3c-0.4,2.7-2.3,11-4.8,7.9c-2.5-3.2-17.6-22-17.6-22"/>
+              <path class="st0 one" d="M19.5,32.8c0,0,14.4,0,20,0s5.2-7.6,4.8-10.3c-0.4-2.7-2.3-11-4.8-7.9c-2.5,3.2-17.6,22-17.6,22"/>
+              <line class="st0 middle" x1="19.5" y1="27.6" x2="39.5" y2="27.6"/>
+              </svg> -->
+            </div>
+            <div x-data="{ dropdownOpen: false }" class="relative">
+                <div  @click="dropdownOpen = !dropdownOpen" href="#" class="flex justify-center item-center w-8 h-8 bg-primary-lightest rounded-full p-1 cursor-pointer">
+                    <img class="rounded-full object-cover" src="./img/woman-headshot-outdoors.jpg" alt="#" sizes="" srcset="">
+                </div>
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+  
+                    <div x-show="dropdownOpen" class="absolute right-2 mt-2 py-2 w-48 bg-white rounded-md shadow-xl z-20">
+                      <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        your profile
+                      </a>
+                      <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        Your projects
+                      </a>
+                      <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        Help
+                      </a>
+                      <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        Settings
+                      </a>
+                      <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-indigo-500 hover:text-white">
+                        Sign Out
+                      </a>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+    </div>
+     
+        <!-- container -->
+        <div class="container phone relative overflow-y-auto ">
+          <!-- nav -->
+    
+          <div class="scroll-content  ">
+                    <!-- main -->
+          <div class="main flex px-5 relative">
+            <div class="heading pt-14 w-28">
+                <h1 class="text-primary">Solutions tailored to each client</h1>
+            </div>
+            <div class="main-illustration absolute bottom-0 right-0">
+              <div class="illustration-wrap relative">
+                <div class="illustration1 w-full h-full">
+                </div>
+              </div>
+            </div>
+        </div>
+        <!-- sub -->
+        <div class="flex flex-col justify-between px-5 py-3 mb-24">
+          <h1 class="subheading text-primary mb-12">Partnerships that crate and grow</h1>
+          <h3 class="paragraph text-primary-text_color">Real solutions to each client’s problems through a deep understanding of their market, needs, and vision.</h3>
+        </div>
+        <!-- Grow together -->
+        <div class="content-one flex flex-wrap px-5">
+          <!-- card1 -->
+          <div class="card px-4 py-8 relative mb-4">
+            <h3 class="paragraph text-primary-text_color">An idea solves a problem,<br> we will think with you to<br> find <strong class="text-primary">YOUR</strong> idea</h3>
+            <div class="content-icon absolute bottom-6  right-6">
+              <div class="icon">
+                <img src="./img/icon1.png"  alt="icon1" srcset="">
+              </div>
+            </div>
+          </div>
+          <!-- nocard2 -->
+          <div class="nocard px-4 py-8 relative mb-4">
+            <h3 class="paragraph text-primary-text_color">We develop solid foundations <br>and architecture, so that
+              <br>your product scales with
+              <br>your <strong class="text-primary">VISION</strong></h3>
+              <div class="content-icon absolute bottom-0 right-4">
+                <div class="icon-two">
+                  <img src="./img/icon2.png"  alt="icon1" srcset="">
+                </div>
+              </div>
+          </div>
+          <!-- card3 -->
+          <div class="card px-4 py-8 relative mb-4">
+            <h3 class="paragraph text-primary-text_color">Delivering market defining high <br>quality solutions that create value <br>for you with <strong class="text-primary">OUR</strong> top-notch <br>engineering team</h3>
+            <div class="content-icon absolute bottom-0 right-4">
+              <div class="icon">
+                <img src="./img/icon3.png"  alt="icon1" srcset="">
+              </div>
+            </div>
+          </div>
+          <!-- nocard4 -->
+          <div class="nocard px-4 py-8 relative mb-4">
+            <h3 class="paragraph text-primary-text_color">Insuring latest inovation finest <br>end-user engagement <br>and great techical <br>quality in your porduct <br>is our <strong class="text-primary">MISSION</strong></h3>
+              <div class="content-icon absolute bottom-0 right-6">
+                <div class="icon">
+                  <img src="./img/icon4.png"  alt="icon1" srcset="">
+                </div>
+              </div>
+          </div>
+          
+        
+       </div>
+       <!-- Second illustration -->
+       <div class="illustration-wrap-two relative mx-auto mt-24 mb-10">
+        <div class="illustration2 w-full h-full">
+        </div>
+      </div>
+      <!-- What we offer -->
+      <div class="container flex flex-col justify-center mb-16">
+        <h3 class="subheading text-primary text-center mb-12">What we offer</h3>
+        <div class="flex flex-row flex-nowrap box mx-4 pb-4">
+          <!-- neural SVG -->
+          <div class="neural py-4">
+            <svg width="134" height="324" viewBox="0 0 134 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27 162H127" stroke="#7B2CDF" stroke-width="2"/>
+              <path d="M128 6L25 162" stroke="#7B2CDF" stroke-width="2"/>
+              <path d="M128 87L28 164" stroke="#7B2CDF" stroke-width="2"/>
+              <path d="M27 164L127 230" stroke="#7B2CDF" stroke-width="2"/>
+              <path d="M24 164L127 318" stroke="#7B2CDF" stroke-width="2"/>
+              <circle cx="128" cy="86" r="5" fill="#FAFAFA" stroke="#7B2CDF" stroke-width="2"/>
+              <circle cx="128" cy="162" r="5" fill="#FAFAFA" stroke="#7B2CDF" stroke-width="2"/>
+              <circle cx="128" cy="230" r="5" fill="#FAFAFA" stroke="#7B2CDF" stroke-width="2"/>
+              <circle cx="128" cy="318" r="5" fill="#FAFAFA" stroke="#7B2CDF" stroke-width="2"/>
+              <circle cx="128" cy="6" r="5" fill="#FAFAFA" stroke="#7B2CDF" stroke-width="2"/>
+              <g filter="url(#filter0_d)">
+              <path d="M34.5 147.866C33.5718 147.33 32.4282 147.33 31.5 147.866L21.5096 153.634C20.5814 154.17 20.0096 155.16 20.0096 156.232L20.0096 167.768C20.0096 168.84 20.5814 169.83 21.5096 170.366L31.5 176.134C32.4282 176.67 33.5718 176.67 34.5 176.134L44.4904 170.366C45.4186 169.83 45.9904 168.84 45.9904 167.768L45.9904 156.232C45.9904 155.16 45.4186 154.17 44.4904 153.634L34.5 147.866Z" fill="#FAFAFA"/>
+              <path d="M33.75 149.165C33.2859 148.897 32.7141 148.897 32.25 149.165L22.2596 154.933C21.7955 155.201 21.5096 155.696 21.5096 156.232L21.5096 167.768C21.5096 168.304 21.7955 168.799 22.2596 169.067L32.25 174.835C32.7141 175.103 33.2859 175.103 33.75 174.835L43.7404 169.067C44.2045 168.799 44.4904 168.304 44.4904 167.768L44.4904 156.232C44.4904 155.696 44.2045 155.201 43.7404 154.933L33.75 149.165Z" stroke="#8943F4" stroke-width="3"/>
+              </g>
+              <defs>
+              <filter id="filter0_d" x="0.00952148" y="137.464" width="65.9808" height="69.0718" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+              <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+              <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+              <feOffset dy="10"/>
+              <feGaussianBlur stdDeviation="10"/>
+              <feColorMatrix type="matrix" values="0 0 0 0 0.537255 0 0 0 0 0.262745 0 0 0 0 0.972549 0 0 0 0.25 0"/>
+              <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+              <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+              </filter>
+              </defs>
+              </svg>
+              
+          </div>
+          <div class="flex flex-col pl-8">
+            <div class="paragraph mb-7">Dedicated Team <br>as a Service</div>
+            <div class="paragraph mb-7">Software Product <br> Development</div>
+            <div class="paragraph mb-7">Software Testing <br> and QA</div>
+            <div class="paragraph mb-7">Mobile Application <br> Development</div>
+            <div class="paragraph mb-7">API Development <br> and Integration</div>
+          </div>
+        </div>
+      </div>
+      <!-- Our Partners -->
+      <div class="flex flex-col justify-center px-5 mb-20">
+        <h3 class="subheading text-primary text-center mb-10">Our Partners</h3>
+        <div class="flex flex-row flex-wrap justify-between w-full px-4 mb-4">
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/NE_large_logo 1.png" class="nisexpress" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/AKS_large_logo 1.png" class="stankovic" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/BADIN_large_logo 1.png" class="badin" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/TB_large_logo 1.png" class="tunebud" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/CP_large_logo 1.png" class="cinephonix" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/MGC_large_logo.png" class="" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/PO_large_logo 1.png" class="" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/SRA_large_logo.png" class="" alt="" srcset="">
+          </div>
+          <div class="partner-wrap relative flex justify-center items-center">
+            <img src="./img/GBI_large_logo 1.png" class="" alt="" srcset="">
+          </div>
+        </div>
+        <h3 class="paragraph text-right text-primary-text_color">Our Portfolio</h3>
+        <h3 class="paragraph text-primary-text_color mt-12 mb-6">Whether you just have an idea or you're trying to evolve your brand for the future, we're ready to work with you.</h3>
+        <div class="world-wrap">
+          <img src="./img/world.png" alt="" srcset="">
+        </div>
+      </div>
+      <!-- Get in Touch -->
+      <div class="flex flex-col w-full px-5 relative mb-28">
+        <h3 class="subheading text-center text-primary mb-10">Get in touch</h3>
+        <div class="flex flex-col w-full">
+          <input type="text" name="name" placeholder="Name" class="bg-gray-100 h-10  px-5 rounded-md text-gray-600 focus:outline-none mb-5">
+          <input type="email" name="email" placeholder="Email" class="bg-gray-100 h-10  px-5 rounded-md text-gray-600 focus:outline-none mb-5">
+          <input type="text" name="name" placeholder="Subject" class="bg-gray-100 h-10  px-5 rounded-md text-gray-600 focus:outline-none mb-5">
+          <input type="text" name="name" placeholder="Message" class="bg-gray-100 h-36  px-5 rounded-md text-gray-600 focus:outline-none mb-5">
+        </div>
+        <div class="recapcha">
+          <!--  -->
+          <!--  -->
+          <!--  -->
+        </div>
+        <button type="submit" class="flex items-center justify-center w-full h-16 bg-primary text-white  rounded-md ripple">
+          Send
+        </button>
+      </div>
+      <!-- Social -->
+      <div class="flex flex-col justify-center px-5 mb-8">
+        <div class="flex flex-col justify-center mb-8">
+          <h3 class="subheading text-primary">Or find us on social media</h3>
+          <p class="paragraph text-primary-text_color">Follow us for our latest news and projects</p>
+        </div>
+        <div class="social flex flex-row justify-between mx-14">
+          <div class="facebook">
+            <img src="./img/facebook.png" alt="" srcset="">
+          </div>
+          <div class="instagram">
+            <img src="./img/instagram.png" alt="" srcset="">
+          </div>
+          <div class="twitter">
+            <img src="./img/twitter.png" alt="" srcset="">
+          </div>
+          <div class="pinterest">
+            <img src="./img/pinterest.png" alt="" srcset="">
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="footer py-2 px-4 bg-primary flex flex-col">
+        <div class=" flex flex-row">
+          <div class="footer-logo pt-4 pr-8">
+            <img src="./img/logotextwhite.png" alt="">
+          </div>
+          <div class="flex flex-col">
+            <p class="foot-p text-gray-200 text-xs">Contact us:</p>
+            <p class="foot-p text-gray-200 ">Adress: Bulevar Njemanjica 30, Nis</p>
+            <p class="foot-p mb-4 text-gray-200 ">Phone: +381 65 52 22 414</p>
+          </div>
+        </div>
+        <p class="foot-p mx-auto text-gray-200 ">Adress: Bulevar Njemanjica 30, Nis</p>
+      </div>
+          </div>
+  
+     
+    </div>
+    <!-- end container -->
+
+    </div>
+
+
+
+
+    <script src="./js/scripts.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+
+
+</body>
+</html>
